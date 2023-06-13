@@ -6,10 +6,10 @@ function Greeting() {
 
   useEffect(() => {
     axios.get('http://localhost:3000/api/greetings/random')
-      .then(response => {
+      .then((response) => {
         setGreeting(response.data.greeting);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching greeting:', error);
       });
   }, []);
